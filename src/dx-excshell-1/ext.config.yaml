@@ -45,3 +45,25 @@ runtimeManifest:
           annotations:
             require-adobe-auth: false
             final: true
+        list-report-suites:
+          function: actions/list-report-suites/index.js
+          web: 'yes'
+          runtime: nodejs:22
+          inputs:
+            LOG_LEVEL: debug
+            apiKey: $SERVICE_API_KEY
+          annotations:
+            require-adobe-auth: false
+            final: true
+            include-ims-credentials: true
+        run-report:
+          function: actions/run-report/index.js
+          web: 'yes'
+          runtime: nodejs:22
+          inputs:
+            LOG_LEVEL: debug
+            apiKey: $SERVICE_API_KEY
+          annotations:
+            require-adobe-auth: false
+            final: true
+            include-ims-credentials: true
