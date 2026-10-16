@@ -9,6 +9,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import SideBar from './SideBar'
 import ActionsForm from './ActionsForm'
 import Files from './Files'
+import Analytics from './Analytics'
 import { Home } from './Home'
 import { About } from './About'
 
@@ -49,6 +50,7 @@ function App (props) {
                 <Route path='/' element={<Home />} />
                 <Route path='/actions' element={<ActionsForm runtime={props.runtime} ims={props.ims} />}/>
                 <Route path='/files' element={<Files runtime={props.runtime} ims={props.ims} />}/>
+                <Route path='/analytics' element={<Analytics runtime={props.runtime} ims={props.ims} />}/>
                 <Route path='/about' element={<About />}/>
               </Routes>
             </View>
